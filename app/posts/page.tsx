@@ -7,7 +7,7 @@ type Post = {
     body: string
 }
 
-export default async function PostPage() {
+export default async function PostsMainPage() {
 
     // Dummy posts
     const response = await fetch("https://jsonplaceholder.typicode.com/posts");
@@ -26,7 +26,7 @@ export default async function PostPage() {
                             <div className="flex flex-col gap-3 sm:flex-row sm:items-center
                             sm:justify-between">
                                 <Link href={`/posts/${post.id}`} className="text-lg font-semibold text-zinc-950 
-                                hover:text-xl">
+                                hover:text-gray-500">
                                     {post.title.charAt(0).toUpperCase() + post.title.slice(1)}
                                 </Link>
                             </div>
